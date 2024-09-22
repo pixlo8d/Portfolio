@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Style Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="desktop">
+        <div class="taskbar">
+            <div class="start-button"></div>
+            <div class="active-windows"></div>
+            <div class="system-tray">
+                <div class="tray-icon volume-icon"></div>
+                <div class="tray-icon network-icon"></div>
+            </div>
+            <div class="clock"></div>
+        </div>
+        <div class="start-menu">
+            <div class="start-menu-item" data-window="about">
+                <i class="fas fa-user"></i> About Me
+            </div>
+            <div class="start-menu-item" data-window="projects">
+                <i class="fas fa-project-diagram"></i> Projects
+            </div>
+            <div class="start-menu-item" data-window="contact">
+                <i class="fas fa-envelope"></i> Contact
+            </div>
+            <div class="start-menu-item" data-window="skills">
+                <i class="fas fa-cogs"></i> Skills
+            </div>
+            <div class="start-menu-item" data-window="settings">
+                <i class="fas fa-cog"></i> Settings
+            </div>
+            <div class="start-menu-item" data-window="notepad">
+                <i class="fas fa-sticky-note"></i> Notepad
+            </div>
+        </div>
+        <div class="icons">
+            <div class="icon" data-window="about">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </div>
+            <div class="icon" data-window="projects">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </div>
+            <div class="icon" data-window="contact">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="icon" data-window="skills">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </div>
+            <div class="icon" data-window="notepad">
+                <i class="fas fa-sticky-note"></i>
+                <span>Notepad</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="windows"></div>
+
+    <div id="context-menu" class="context-menu">
+        <ul>
+            <li>View</li>
+            <li>Sort by</li>
+            <li>Refresh</li>
+            <li>Paste</li>
+            <li>New</li>
+            <li>Display settings</li>
+            <li>Personalize</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            var contextMenu = document.getElementById('context-menu');
+            contextMenu.style.display = 'block';
+            contextMenu.style.left = e.pageX + 'px';
+            contextMenu.style.top = e.pageY + 'px';
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('context-menu').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

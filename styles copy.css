@@ -1,0 +1,120 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#desktop {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    z-index: 1000;
+}
+
+.start-button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #444;
+    border-radius: 3px;
+    background-image: url('start.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.start-button:hover {
+    background-color: #555;
+}
+
+.start-menu {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: none;
+    z-index: 1000;
+}
+
+.start-menu-item {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.start-menu-item:hover {
+    background-color: #444;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.icon {
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 80px;
+}
+
+.icon i {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.icon span {
+    display: block;
+    margin-top: 5px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.window {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.window-header {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-content {
+    padding: 10px;
+}
+
+.close-button {
+    cursor: pointer;
+}
