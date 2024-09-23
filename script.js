@@ -368,10 +368,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `
                     <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;">My Projects</h2>
                     <div class="project-container" style="overflow-y: auto; max-height: calc(100% - 60px);">
-                        ${Array.from({length: 44}, (_, i) => i + 1).map(num => `
+                        ${[
+                            "https://github.com/user-attachments/assets/6cba182f-2b5e-4094-ac31-3d08db063576",
+                            "https://github.com/user-attachments/assets/2dffd4d5-38eb-4882-b34c-e8171d2b59d2",
+                            "https://github.com/user-attachments/assets/aebaae08-1528-4c94-86b6-140502cf3d62",
+                            "https://github.com/user-attachments/assets/7e7c4fb2-8994-422d-99f7-038c9ff29a0f",
+                            "https://github.com/user-attachments/assets/22e2b076-c168-4cb4-9ab4-9afdc4996e71",
+                            "https://github.com/user-attachments/assets/77eada60-e854-46c6-93c4-aa2fadd8b2bb",
+                            "https://github.com/user-attachments/assets/21da873a-8864-4614-9dcf-697339420575",
+                            "https://github.com/user-attachments/assets/c621e255-1b92-497f-bd2a-1739b771b4e6",
+                            "https://github.com/user-attachments/assets/eb156eb9-ed0c-48d9-8a34-4be15a8a0b3b",
+                            "https://github.com/user-attachments/assets/e9acc6d4-87c9-4a0f-9581-f22a41896742",
+                            "https://github.com/user-attachments/assets/d0c130fb-89d2-40a2-993a-9dd473d95b44",
+                            "https://github.com/user-attachments/assets/afa4321a-48bf-47bc-8d18-7779cee28fdb",
+                            "https://github.com/user-attachments/assets/f56bf57f-bbb2-46a9-a640-99895d5c3415",
+                            "https://github.com/user-attachments/assets/f49c7d62-389f-4a75-9523-18516c76187c",
+                            "https://github.com/user-attachments/assets/df3521ef-16a4-4699-b1a9-1c015c7ca3c1",
+                            "https://github.com/user-attachments/assets/f065159e-104d-43f1-8363-e90aa0092db5",
+                            "https://github.com/user-attachments/assets/5796fb76-889a-41c5-b02b-f4c472669b3a",
+                            "https://github.com/user-attachments/assets/7ada1c72-d76d-4172-9243-1446ad10db2a",
+                            "https://github.com/user-attachments/assets/6aaeac42-100d-4659-9c66-3c7f814e3a70",
+                            "https://github.com/user-attachments/assets/e694630e-5e55-4480-9711-fc265b58cbef",
+                            "https://github.com/user-attachments/assets/3631ab2d-19de-4313-84f0-215c0693de2d",
+                            "https://github.com/user-attachments/assets/bc408a9c-41ec-4998-a1d7-91aaf84bc2af",
+                            "https://github.com/user-attachments/assets/1e5142f1-ba8b-4070-93a2-d36905fe9792",
+                            "https://github.com/user-attachments/assets/9826419d-1658-4ba6-9704-43ef862ca38a",
+                            "https://github.com/user-attachments/assets/e6b6e006-54b0-4973-b8fb-ef2004dcd1fd",
+                            "https://github.com/user-attachments/assets/b987c39e-fe7c-498f-bd0b-4f5322a54a8b",
+                            "https://github.com/user-attachments/assets/dec924a0-9738-48ea-9ffb-b9a0edadaf24",
+                            "https://github.com/user-attachments/assets/4292e15d-e772-43d4-9aff-e97401d39196",
+                            "https://github.com/user-attachments/assets/4870e24c-f7a0-48da-a5f6-8ab9831f8760",
+                            "https://github.com/user-attachments/assets/e6f95383-b301-4885-8f5f-da414f8f7da8",
+                            "https://github.com/user-attachments/assets/deb8959d-37c5-426c-bccd-f36cda2cfc0f",
+                            "https://github.com/user-attachments/assets/342fd225-92ff-47a1-ace7-7d0e59405ce0",
+                            "https://github.com/user-attachments/assets/786d3e74-fdf7-4426-9b75-6596e3a5d657",
+                            "https://github.com/user-attachments/assets/83f5aea3-3ba0-412a-8bb4-94fbb2fb7dbc",
+                            "https://github.com/user-attachments/assets/2d34a50a-c6a4-4018-bb9f-66b5f671c753",
+                            "https://github.com/user-attachments/assets/85265ffd-110f-40f4-86f1-b388acd8ad22",
+                            "https://github.com/user-attachments/assets/484ddce4-c6ad-4a07-ab30-5fab7c17e4ed",
+                            "https://github.com/user-attachments/assets/01f113b2-601c-443f-98d5-d3b6ba0be6b0",
+                            "https://github.com/user-attachments/assets/f51d93a9-5c26-4a5e-be2d-cfee384270d0",
+                            "https://github.com/user-attachments/assets/c8561b89-5c2a-47f6-a99d-c1488a73b766",
+                            "https://iili.io/dsI1Dw7.jpg",
+                            "https://iili.io/dsI14Gs.jpg",
+                            "https://iili.io/dsI1kyN.jpg",
+                            "https://iili.io/dsI1FQn.jpg"
+                            
+                        ].map((src, index) => `
                         <div class="project-item">
-                            <img src="projects/project${num}.jpg" alt="Project ${num}" class="project-image">
-                            <div class="project-title">Project ${num}</div>
+                            <img src="${src}" alt="Project ${index + 1}" class="project-image">
+                            <div class="project-title">Project ${index + 1}</div>
                         </div>
                         `).join('')}
                     </div>
